@@ -24,8 +24,8 @@ export default function Navbar({ children }) {
   ];
 
   return (
-    <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-lg">
-      <div className="">
+    <nav className="justify-center items-center h-[10vh] bg-slate-900 text-white text-sm hidden sm:flex md:justify-between md:text-lg">
+      <div className="hidden md:block">
         <a href="#">
           <Image src={Logo} alt="logo" width={230} height={230} />
         </a>

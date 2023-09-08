@@ -19,7 +19,7 @@ export default function Courses() {
     <>
       <Navbar>Courses</Navbar>
       <div className="py-[50px]">
-        <h1 className="text-5xl font-bold">Courses</h1>
+        <h1 className="text-4xl px-10 font-bold md:text-5xl md:px-0">Courses</h1>
         <div className="flex flex-wrap justify-center gap-16 mt-12">
           <div className="rounded overflow-hidden shadow-lg bg-white max-w-xs rounded-2xl">
             <Image src={openWater} alt="open-water" width={400} height={400} />

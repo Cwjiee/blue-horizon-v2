@@ -17,7 +17,7 @@ export default function Home() {
       <div className="h-[100vh]">
         <Navbar>Home</Navbar>
         <div className="w-full m-auto mt-40">
-          <h1 className="text-7xl font-bold tracking-wide text-center keep-all leading-normal w-[80%] mx-auto">
+          <h1 className="text-4xl font-bold tracking-wide text-center keep-all leading-normal w-[80%] mx-auto md:text-7xl">
             Embark on an Epic Sea Dive Adventure!
           </h1>
           <p className="w-[45%] mx-auto text-center tracking-wide keep-all mt-6">
@@ -47,11 +47,11 @@ export default function Home() {
         >
           <h1
             id="down"
-            className="mt-10 text-5xl font-bold text-left keep-all leading-snug w-[48%]"
+            className="mt-10 text-3xl font-bold text-center keep-all leading-snug w-[80%] m-auto md:text-5xl md:text-left md:w-[48%]"
           >
             Explore The Wonders Of Sea Diving With Us!
           </h1>
-          <p className="keep-all w-[45%]">
+          <p className="keep-all text-center w-[80%] m-auto md:w[45%] md:text-left">
             Are you ready to plunge into the majestic depths of the underwater
             world? Look no further!
           </p>
