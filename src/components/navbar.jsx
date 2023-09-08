@@ -1,31 +1,47 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import Link from './Links';
+import { v4 } from 'uuid';
 
-export default function Navbar() {
+export default function Navbar({children}) {
+
+    const links = [
+        {
+            href: "/",
+            label: "Home",
+        },
+        {
+            href: "/courses",
+            label: "Courses",
+        },
+        {
+            href: "/about",
+            label: "About",
+        },
+        {
+            href: "/contact",
+            label: "Contact",
+        },
+    ];
 
     return (
-        <nav class="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-lg">
+        <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-lg">
             <div>
                 <a href="#">
                     <Image src="../public/logo.svg" alt="logo" width={230} height={230} />
                 </a>
             </div>
-            <div class="flex justify-between items-center gap-10">
-                <ul id="navbar" class="flex justify-between gap-10">
-                    <li class="text-sky-600">
-                        <Link href='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/courses">Courses</Link>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+            <div className="flex justify-between items-center gap-10">
+                <ul id="navbar" className="flex justify-between gap-10">
+                    {links.map((link) => {
+                        return (
+                            <li key={v4()}>
+                                {/* <Link key={v4()} className="text-sky-600" href={link.href}>{link.label}</Link> */}
+                                <Link link={link} current={children}  />
+                            </li>
+                        )
+                    })}
                 </ul>
-                <button class="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full">Get Started</button>
+                <button className="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full">Get Started</button>
             </div>
         </nav>
     )
