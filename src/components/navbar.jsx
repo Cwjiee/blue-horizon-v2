@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "./Links";
 import { v4 } from "uuid";
+import { useState, useEffect } from "react";
 
 export default function Navbar({ children }) {
   const links = [
@@ -24,7 +25,7 @@ export default function Navbar({ children }) {
 
   return (
     <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-lg">
-      <div>
+      <div className="">
         <a href="#">
           <Image src="../public/logo.svg" alt="logo" width={230} height={230} />
         </a>
@@ -34,7 +35,6 @@ export default function Navbar({ children }) {
           {links.map((link) => {
             return (
               <li key={v4()}>
-                {/* <Link key={v4()} className="text-sky-600" href={link.href}>{link.label}</Link> */}
                 <Link link={link} current={children} />
               </li>
             );

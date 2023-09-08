@@ -7,6 +7,7 @@ import advancedOpenWater from "../../public/advanced-diver.jpg";
 import rescueDiver from "../../public/rescue-diver.jpg";
 import enrichedDiver from "../../public/enriched-diver.jpg";
 import Router from "next/router";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
   const toCourses = () => Router.push("/courses");
@@ -26,18 +27,28 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full flex justify-center mt-16">
-          <button
-            id="discoverBtn"
-            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
+          <Link
+            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 cursor-pointer"
+            activeClass="active"
+            to="courseSection"
+            spy="true"
+            smooth="true"
+            duration={500}
           >
             Discover More
-          </button>
+          </Link>
         </div>
       </div>
 
-      <div className="h-[100vh]">
-        <div className="flex flex-col gap-5 mb-14">
-          <h1 className="mt-10 text-5xl font-bold text-left keep-all leading-snug w-[48%]">
+      <div className="h-[100vh]" id>
+        <div
+          id="courseSection"
+          className="flex flex-col gap-5 mb-14 scroll-smooth active"
+        >
+          <h1
+            id="down"
+            className="mt-10 text-5xl font-bold text-left keep-all leading-snug w-[48%]"
+          >
             Explore The Wonders Of Sea Diving With Us!
           </h1>
           <p className="keep-all w-[45%]">
