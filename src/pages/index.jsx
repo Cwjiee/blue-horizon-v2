@@ -31,7 +31,7 @@ export default function Home() {
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 cursor-pointer"
             activeClass="active"
             to="courseSection"
-            spy="true"
+            spy={true}
             smooth="true"
             duration={500}
           >
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[100vh]" id>
+      <div className="h-[100vh]">
         <div
           id="courseSection"
           className="flex flex-col gap-5 mb-14 scroll-smooth active"

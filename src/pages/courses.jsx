@@ -13,7 +13,6 @@ export default function Courses() {
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log(isloading);
     setTimeout(() => setIsLoading(false), 1500);
   }, []);
   return !isloading ? (
@@ -22,7 +21,7 @@ export default function Courses() {
       <div className="py-[50px]">
         <h1 className="text-5xl font-bold">Courses</h1>
         <div className="flex flex-wrap justify-center gap-16 mt-12">
-          <div class="rounded overflow-hidden shadow-lg bg-white max-w-xs rounded-2xl">
+          <div className="rounded overflow-hidden shadow-lg bg-white max-w-xs rounded-2xl">
             <Image src={openWater} alt="open-water" width={400} height={400} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
