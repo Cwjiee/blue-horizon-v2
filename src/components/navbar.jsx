@@ -13,7 +13,7 @@ export default function Navbar() {
             <div class="flex justify-between items-center gap-10">
                 <ul id="navbar" class="flex justify-between gap-10">
                     <li class="text-sky-600">
-                        <Link href='#'>Home</Link>
+                        <Link href='/'>Home</Link>
                     </li>
                     <li>
                         <Link href="/courses">Courses</Link>
