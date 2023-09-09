@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[100vh]">
+      <div className="h-[100vh] flex flex-row">
         <div className="flex flex-col gap-10 mb-14 scroll-smooth active w-[50%]">
           <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-auto md:text-5xl md:text-left md:m-0">
             Why Choose Us?
@@ -147,6 +147,15 @@ export default function Home() {
               <h3 className="font-semibold">Advance Equipment</h3>
             </div>
           </div>
+        </div>
+        <div>
+        {/* <button
+            id="exploreBtn"
+            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
+            onClick={toCourses}
+          >
+            Contact Us
+          </button> */}
         </div>
       </div>
     </>
