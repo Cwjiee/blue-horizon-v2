@@ -10,6 +10,10 @@ import Router from "next/router";
 import { Link, animateScroll as scroll } from "react-scroll";
 import HashLoader from "react-spinners/HashLoader";
 import { useEffect, useState } from "react";
+import snorkel from "../../public/snorkel.png";
+import coral from "../../public/coral.png"
+import vest from "../../public/vest.png"
+import oxygen from "../../public/oxygen-tank.png"
 
 export default function Home() {
   const [isloading, setIsLoading] = useState(true);
@@ -24,31 +28,34 @@ export default function Home() {
     <>
       <div className="h-[100vh]">
         <Navbar>Home</Navbar>
-        <div className="w-full m-auto mt-40">
-          <h1 className="text-4xl font-bold tracking-wide text-center keep-all leading-normal w-[80%] mx-auto md:text-7xl">
-            Embark on an Epic Sea Dive Adventure!
-          </h1>
-          <p className="w-[45%] mx-auto text-center tracking-wide keep-all mt-6">
-            Explore the mysteries of the ocean with our experienced dive
-            instructors. We offer a wide range of courses for all levels of
-            divers.
-          </p>
+        <div className="h-[90vh] pt-20">
+          <div className="w-full m-auto">
+            <h1 className="text-4xl font-bold tracking-wide text-center keep-all leading-normal w-[80%] mx-auto md:text-7xl">
+              Embark on an Epic Sea Dive Adventure!
+            </h1>
+            <p className="w-[45%] mx-auto text-center tracking-wide keep-all mt-6">
+              Explore the mysteries of the ocean with our experienced dive
+              instructors. We offer a wide range of courses for all levels of
+              divers.
+            </p>
+          </div>
+          <div className="w-full flex justify-center mt-16">
+            <Link
+              className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 cursor-pointer"
+              activeClass="active"
+              to="courseSection"
+              spy={true}
+              smooth="true"
+              duration={500}
+            >
+              Discover More
+            </Link>
+          </div>
         </div>
-        <div className="w-full flex justify-center mt-16">
-          <Link
-            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 cursor-pointer"
-            activeClass="active"
-            to="courseSection"
-            spy={true}
-            smooth="true"
-            duration={500}
-          >
-            Discover More
-          </Link>
-        </div>
+        
       </div>
 
-      <div className="h-[100vh]">
+      <div className="h-[100vh] mt-40">
         <div
           id="courseSection"
           className="flex flex-col gap-5 mb-14 scroll-smooth active"
@@ -59,7 +66,7 @@ export default function Home() {
           >
             Explore The Wonders Of Sea Diving With Us!
           </h1>
-          <p className="keep-all w-[80%] m-auto md:w[45%] md:m-0">
+          <p className="keep-all w-[80%] m-auto md:w[45%] md:m-0 md:w-[48%] text-gray-400">
             Are you ready to plunge into the majestic depths of the underwater
             world? Look no further!
           </p>
@@ -109,6 +116,37 @@ export default function Home() {
           >
             Explore More
           </button>
+        </div>
+      </div>
+
+      <div className="h-[100vh]">
+        <div className="flex flex-col gap-10 mb-14 scroll-smooth active w-[50%]">
+          <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-auto md:text-5xl md:text-left md:m-0">
+            Why Choose Us?
+          </h1>
+          <p className="keep-all m-auto md:m-0 text-gray-400">
+            We are a team of experienced divers who are passionate about
+            exploring the underwater world. We are committed to providing you
+            with the best diving experience.
+          </p>
+          <div className="grid grid-cols-2 gap-10">
+            <div className="flex flex-col gap-2">
+              <Image src={snorkel} alt="snorkel" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <h3 className="font-semibold">Professional Guidance</h3>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Image src={coral} alt="coral" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <h3 className="font-semibold">Eco-friendly</h3>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Image src={vest} alt="vest" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <h3 className="font-semibold">Safety</h3>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Image src={oxygen} alt="oxygen tank" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <h3 className="font-semibold">Advance Equipment</h3>
+            </div>
+          </div>
         </div>
       </div>
     </>

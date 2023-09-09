@@ -43,7 +43,6 @@ export default function Courses() {
               alt="open-water"
               width={400}
               height={400}
-              className="rounded-xl"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -65,7 +64,6 @@ export default function Courses() {
               alt="open-water"
               width={400}
               height={400}
-              className="rounded-xl"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -87,7 +85,6 @@ export default function Courses() {
               alt="open-water"
               width={400}
               height={400}
-              className="rounded-xl"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mbName-2">
@@ -111,7 +108,6 @@ export default function Courses() {
               alt="open-water"
               width={400}
               height={400}
-              className="rounded-xl"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -133,7 +129,6 @@ export default function Courses() {
               alt="open-water"
               width={400}
               height={400}
-              className="rounded-xl"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>

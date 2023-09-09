@@ -39,16 +39,16 @@ export default function Navbar({ children }) {
       <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-sm md:text-lg">
         <div className="ml-2">
           <a href="#">
-            <Image src={Logo} alt="logo" width={200} height={200} />
+            <Image src={Logo} alt="logo" width={200} height="auto" />
           </a>
         </div>
-        <div class="lg:hidden">
+        <div className="lg:hidden">
           <button
-            class="navbar-burger flex items-center text-white p-3"
+            className="navbar-burger flex items-center text-white p-3"
             onClick={openNav}
           >
             <svg
-              class="block h-6 w-10 fill-current"
+              className="block h-6 w-10 fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -73,24 +73,24 @@ export default function Navbar({ children }) {
         </div>
       </nav>
       <div className="navbar-menu relative z-50 hidden">
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-          <div class="flex items-center mb-8">
-            <a class="mr-auto text-3xl font-bold leading-none" href="#">
-              <Image src={Logo} alt="logo" width={200} height={200} />
+        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+          <div className="flex items-center mb-8">
+            <a className="mr-auto text-3xl font-bold leading-none" href="#">
+              <Image src={Logo} alt="logo" width={200} height="auto" />
             </a>
-            <button class="navbar-close" onClick={closeNav}>
+            <button className="navbar-close" onClick={closeNav}>
               <svg
-                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
                 ></path>
               </svg>
@@ -100,9 +100,9 @@ export default function Navbar({ children }) {
             <ul>
               {links.map((link) => {
                 return (
-                  <li class="mb-1" key={v4}>
+                  <li className="mb-1" key={v4()}>
                     <Link
-                      class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                      className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
                       href={link.href}
                     >
                       {link.label}
@@ -112,10 +112,10 @@ export default function Navbar({ children }) {
               })}
             </ul>
           </div>
-          <div class="mt-auto">
-            <div class="pt-6">
+          <div className="mt-auto">
+            <div className="pt-6">
               <a
-                class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
                 href="#"
               >
                 Get Started
