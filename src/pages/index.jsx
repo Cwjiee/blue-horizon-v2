@@ -8,11 +8,19 @@ import rescueDiver from "../../public/rescue-diver.jpg";
 import enrichedDiver from "../../public/enriched-diver.jpg";
 import Router from "next/router";
 import { Link, animateScroll as scroll } from "react-scroll";
+import HashLoader from "react-spinners/HashLoader";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isloading, setIsLoading] = useState(true);
+
   const toCourses = () => Router.push("/courses");
 
-  return (
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 1500);
+  }, []);
+
+  return !isloading ? (
     <>
       <div className="h-[100vh]">
         <Navbar>Home</Navbar>
@@ -47,16 +55,16 @@ export default function Home() {
         >
           <h1
             id="down"
-            className="mt-10 text-3xl font-bold text-center keep-all leading-snug w-[80%] m-auto md:text-5xl md:text-left md:w-[48%]"
+            className="mt-10 text-3xl font-bold text-center keep-all leading-snug w-[80%] m-auto md:text-5xl md:text-left md:w-[48%] md:m-0"
           >
             Explore The Wonders Of Sea Diving With Us!
           </h1>
-          <p className="keep-all text-center w-[80%] m-auto md:w[45%] md:text-left">
+          <p className="keep-all w-[80%] m-auto md:w[45%] md:m-0">
             Are you ready to plunge into the majestic depths of the underwater
             world? Look no further!
           </p>
         </div>
-        <Swiper slidesPerView={"2"} spaceBetween={30} centeredSlides={true}>
+        <Swiper slidesPerView={"2"} spaceBetween={30} centeredSlides={true} loop>
           <SwiperSlide>
             <Image
               src={openWater}
@@ -105,5 +113,13 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  ) : (
+    <div className="w-full h-[100vh] flex justify-center item-center">
+      <HashLoader
+        color="#1c48bc"
+        size={150}
+        cssOverride={{ display: "block", margin: "auto" }}
+      />
+    </div>
+  )
 }

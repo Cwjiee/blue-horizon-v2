@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "./Links";
+import Links from "./Links";
 import { v4 } from "uuid";
-import Logo from "../../public/logo.svg"
+import Logo from "../../public/logo.svg";
+import Link from "next/link";
 
 export default function Navbar({ children }) {
   const links = [
@@ -23,27 +24,106 @@ export default function Navbar({ children }) {
     },
   ];
 
+  const openNav = () => {
+    const navbar = document.querySelector(".navbar-menu");
+    navbar.classList.toggle("hidden");
+  };
+
+  const closeNav = () => {
+    const navbar = document.querySelector(".navbar-menu");
+    navbar.classList.toggle("hidden");
+  };
+
   return (
-    <nav className="justify-center items-center h-[10vh] bg-slate-900 text-white text-sm hidden sm:flex md:justify-between md:text-lg">
-      <div className="hidden md:block">
-        <a href="#">
-          <Image src={Logo} alt="logo" width={230} height={230} />
-        </a>
+    <>
+      <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-sm md:text-lg">
+        <div className="ml-2">
+          <a href="#">
+            <Image src={Logo} alt="logo" width={200} height={200} />
+          </a>
+        </div>
+        <div class="lg:hidden">
+          <button
+            class="navbar-burger flex items-center text-white p-3"
+            onClick={openNav}
+          >
+            <svg
+              class="block h-6 w-10 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <div className="hidden justify-between items-center gap-10 md:flex">
+          <ul id="navbar" className="flex justify-between gap-10">
+            {links.map((link) => {
+              return (
+                <li key={v4()}>
+                  <Links link={link} current={children} />
+                </li>
+              );
+            })}
+          </ul>
+          <button className="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full">
+            Get Started
+          </button>
+        </div>
+      </nav>
+      <div className="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+              <Image src={Logo} alt="logo" width={200} height={200} />
+            </a>
+            <button class="navbar-close" onClick={closeNav}>
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              {links.map((link) => {
+                return (
+                  <li class="mb-1" key={v4}>
+                    <Link
+                      class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                      href={link.href}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <div class="pt-6">
+              <a
+                class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                href="#"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div className="flex justify-between items-center gap-10">
-        <ul id="navbar" className="flex justify-between gap-10">
-          {links.map((link) => {
-            return (
-              <li key={v4()}>
-                <Link link={link} current={children} />
-              </li>
-            );
-          })}
-        </ul>
-        <button className="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full">
-          Get Started
-        </button>
-      </div>
-    </nav>
+    </>
   );
 }
