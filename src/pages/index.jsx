@@ -11,9 +11,10 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import HashLoader from "react-spinners/HashLoader";
 import { useEffect, useState } from "react";
 import snorkel from "../../public/snorkel.png";
-import coral from "../../public/coral.png"
-import vest from "../../public/vest.png"
-import oxygen from "../../public/oxygen-tank.png"
+import coral from "../../public/coral.png";
+import vest from "../../public/vest.png";
+import oxygen from "../../public/oxygen-tank.png";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 export default function Home() {
   const [isloading, setIsLoading] = useState(true);
@@ -28,7 +29,7 @@ export default function Home() {
     <>
       <div className="h-[100vh]">
         <Navbar>Home</Navbar>
-        <div className="h-[90vh] pt-20">
+        <div className="h-[90vh] pt-28">
           <div className="w-full m-auto">
             <h1 className="text-4xl font-bold tracking-wide text-center keep-all leading-normal w-[80%] mx-auto md:text-7xl">
               Embark on an Epic Sea Dive Adventure!
@@ -52,7 +53,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        
       </div>
 
       <div className="h-[100vh] mt-40">
@@ -71,12 +71,16 @@ export default function Home() {
             world? Look no further!
           </p>
         </div>
-        <Swiper slidesPerView={"auto"} spaceBetween={30} centeredSlides={true} loop 
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={30}
+          centeredSlides={true}
+          loop
           breakpoints={{
             480: {
               slidesPerView: 2,
               spaceBetween: 20,
-            }
+            },
           }}
         >
           <SwiperSlide>
@@ -119,7 +123,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[100vh] flex flex-row">
+      <div className="h-[100vh] flex flex-row mt-10">
         <div className="flex flex-col gap-10 mb-14 scroll-smooth active w-[50%]">
           <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-auto md:text-5xl md:text-left md:m-0">
             Why Choose Us?
@@ -131,31 +135,91 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-10">
             <div className="flex flex-col gap-2">
-              <Image src={snorkel} alt="snorkel" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <Image
+                src={snorkel}
+                alt="snorkel"
+                width={40}
+                height={40}
+                style={{
+                  filter:
+                    "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
+                }}
+              />
               <h3 className="font-semibold">Professional Guidance</h3>
             </div>
             <div className="flex flex-col gap-2">
-              <Image src={coral} alt="coral" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <Image
+                src={coral}
+                alt="coral"
+                width={40}
+                height={40}
+                style={{
+                  filter:
+                    "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
+                }}
+              />
               <h3 className="font-semibold">Eco-friendly</h3>
             </div>
             <div className="flex flex-col gap-2">
-              <Image src={vest} alt="vest" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <Image
+                src={vest}
+                alt="vest"
+                width={40}
+                height={40}
+                style={{
+                  filter:
+                    "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
+                }}
+              />
               <h3 className="font-semibold">Safety</h3>
             </div>
             <div className="flex flex-col gap-2">
-              <Image src={oxygen} alt="oxygen tank" width={40} height={40} style={{ filter: 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'}} />
+              <Image
+                src={oxygen}
+                alt="oxygen tank"
+                width={40}
+                height={40}
+                style={{
+                  filter:
+                    "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
+                }}
+              />
               <h3 className="font-semibold">Advance Equipment</h3>
             </div>
           </div>
         </div>
-        <div>
-        {/* <button
-            id="exploreBtn"
-            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
-            onClick={toCourses}
+        <div className="flex flex-col items-center">
+          <p id="hiddenText" className="hidden text-white text-lg">
+            fun fact: there is no fun fact!
+          </p>
+          <div
+            onMouseOver={() =>
+              document.getElementById("hiddenText").classList.remove("hidden")
+            }
+            onMouseOut={() =>
+              document.getElementById("hiddenText").classList.add("hidden")
+            }
+            className="mb-10"
           >
-            Contact Us
-          </button> */}
+            <Player
+              autoplay
+              loop
+              src="https://lottie.host/78ee22b5-e5f2-4385-a9e5-512f5b291fce/4v5uIZVdXU.json"
+              style={{ height: "400px", width: "400px" }}
+            >
+              <Controls
+                visible={false}
+                buttons={["play", "repeat", "frame", "debug"]}
+              />
+            </Player>
+          </div>
+          {/* <button
+          id="exploreBtn"
+          className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
+          onClick={toCourses}
+        >
+          Contact Us
+        </button> */}
         </div>
       </div>
     </>
@@ -167,5 +231,5 @@ export default function Home() {
         cssOverride={{ display: "block", margin: "auto" }}
       />
     </div>
-  )
+  );
 }

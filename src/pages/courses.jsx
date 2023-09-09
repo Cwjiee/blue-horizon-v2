@@ -19,13 +19,15 @@ export default function Courses() {
     <>
       <Navbar>Courses</Navbar>
       <div className="py-[50px]">
-        <h1 className="text-4xl px-10 font-bold md:text-5xl md:px-0">Courses</h1>
+        <h1 className="text-4xl px-10 font-bold md:text-5xl md:px-0">
+          Courses
+        </h1>
         <div className="flex flex-wrap justify-center gap-16 mt-12">
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
             <Image src={openWater} alt="open-water" width={400} height={400} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -33,11 +35,11 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
             <Image
               src={advancedOpenWater}
               alt="open-water"
@@ -46,7 +48,7 @@ export default function Courses() {
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -54,11 +56,11 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
             <Image
               src={rescueDiver}
               alt="open-water"
@@ -67,7 +69,7 @@ export default function Courses() {
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -75,11 +77,11 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
             <Image
               src={enrichedDiver}
               alt="open-water"
@@ -90,7 +92,7 @@ export default function Courses() {
               <div className="font-bold text-xl mbName-2">
                 The Coldest Sunset
               </div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -98,11 +100,11 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
             <Image
               src={scubaRefresher}
               alt="open-water"
@@ -111,7 +113,7 @@ export default function Courses() {
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -119,20 +121,15 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
-            <Image
-              src={diveTheory}
-              alt="open-water"
-              width={400}
-              height={400}
-            />
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+            <Image src={diveTheory} alt="open-water" width={400} height={400} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-slate-200">
+              <p className="text-slate-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
@@ -140,7 +137,7 @@ export default function Courses() {
             </div>
             <div className="px-6 pt-4 pb-2">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                RM1500
+                RM 1500
               </span>
             </div>
           </div>
