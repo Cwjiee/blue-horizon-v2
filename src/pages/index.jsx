@@ -64,45 +64,37 @@ export default function Home() {
             world? Look no further!
           </p>
         </div>
-        <Swiper slidesPerView={"2"} spaceBetween={30} centeredSlides={true} loop>
+        <Swiper slidesPerView={"auto"} spaceBetween={30} centeredSlides={true} loop >
           <SwiperSlide>
             <Image
               src={openWater}
               alt="open-water"
-              width={500}
-              height={500}
-              className="rounded-xl"
+              className="rounded-xl w-[90%] mx-auto"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={advancedOpenWater}
-              alt="open-water"
-              width={500}
-              height={500}
-              className="rounded-xl"
+              alt="advanced-open-water"
+              className="rounded-xl w-[90%] mx-auto"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={rescueDiver}
-              alt="open-water"
-              width={500}
-              height={500}
-              className="rounded-xl"
+              alt="rescue-diver"
+              className="rounded-xl w-[90%] mx-auto"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={enrichedDiver}
-              alt="open-water"
-              width={500}
-              height={500}
-              className="rounded-xl"
+              alt="enriched-diver"
+              className="rounded-xl w-[90%] mx-auto"
             />
           </SwiperSlide>
         </Swiper>
-        <div className="w-full flex justify-center mt-10">
+        <div className="w-full flex justify-center mt-20">
           <button
             id="exploreBtn"
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
