@@ -64,33 +64,40 @@ export default function Home() {
             world? Look no further!
           </p>
         </div>
-        <Swiper slidesPerView={"auto"} spaceBetween={30} centeredSlides={true} loop >
+        <Swiper slidesPerView={"auto"} spaceBetween={30} centeredSlides={true} loop 
+          breakpoints={{
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            }
+          }}
+        >
           <SwiperSlide>
             <Image
               src={openWater}
               alt="open-water"
-              className="rounded-xl w-[90%] mx-auto"
+              className="rounded-xl w-[90%] mx-auto md:w-[90%]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={advancedOpenWater}
               alt="advanced-open-water"
-              className="rounded-xl w-[90%] mx-auto"
+              className="rounded-xl w-[90%] mx-auto md:w-[90%]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={rescueDiver}
               alt="rescue-diver"
-              className="rounded-xl w-[90%] mx-auto"
+              className="rounded-xl w-[90%] mx-auto md:w-[90%]"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               src={enrichedDiver}
               alt="enriched-diver"
-              className="rounded-xl w-[90%] mx-auto"
+              className="rounded-xl w-[90%] mx-auto md:w-[90%]"
             />
           </SwiperSlide>
         </Swiper>
