@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[95vh] sm:h-[100vh] mt-40 sm:mt-20">
+      <div className="h-[90vh] sm:h-[100vh] mt-40 sm:mt-20">
         <div
           id="courseSection"
           className="flex flex-col gap-5 mb-14 scroll-smooth active"
@@ -123,12 +123,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-24 px-10">
-        <div className="flex flex-col gap-10 mb-14 scroll-smooth active sm:w-[50%]">
+      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-20 px-10">
+        <div className="flex flex-col gap-10 sm:w-[50%] mt-20">
           <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-0 md:text-5xl md:text-left md:m-0">
             Why Choose Us?
           </h1>
-          <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400">
+          <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400 text-center sm:text-left">
             We are a team of experienced divers who are passionate about
             exploring the underwater world. We are committed to providing you
             with the best diving experience.
@@ -144,8 +144,11 @@ export default function Home() {
                   filter:
                     "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
                 }}
+                className="m-auto sm:m-0"
               />
-              <h3 className="font-semibold">Professional Guidance</h3>
+              <h3 className="font-semibold text-center sm:text-left">
+                Professional Guidance
+              </h3>
             </div>
             <div className="flex flex-col gap-2">
               <Image
@@ -157,8 +160,11 @@ export default function Home() {
                   filter:
                     "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
                 }}
+                className="m-auto sm:m-0"
               />
-              <h3 className="font-semibold">Eco-friendly</h3>
+              <h3 className="font-semibold text-center sm:text-left">
+                Eco-friendly
+              </h3>
             </div>
             <div className="flex flex-col gap-2">
               <Image
@@ -170,8 +176,9 @@ export default function Home() {
                   filter:
                     "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
                 }}
+                className="m-auto sm:m-0"
               />
-              <h3 className="font-semibold">Safety</h3>
+              <h3 className="font-semibold text-center sm:text-left">Safety</h3>
             </div>
             <div className="flex flex-col gap-2">
               <Image
@@ -183,12 +190,15 @@ export default function Home() {
                   filter:
                     "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)",
                 }}
+                className="m-auto sm:m-0"
               />
-              <h3 className="font-semibold">Advance Equipment</h3>
+              <h3 className="font-semibold text-center sm:text-left">
+                Advance Equipment
+              </h3>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="hidden sm:flex flex-col items-center">
           <p id="hiddenText" className="hidden text-white text-lg">
             fun fact: there is no fun fact!
           </p>
@@ -199,7 +209,7 @@ export default function Home() {
             onMouseOut={() =>
               document.getElementById("hiddenText").classList.add("hidden")
             }
-            className="mb-10 hidden sm:block"
+            className="mb-0 hidden sm:block"
           >
             <Player
               autoplay
@@ -213,13 +223,13 @@ export default function Home() {
               />
             </Player>
           </div>
-          {/* <button
-          id="exploreBtn"
-          className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
-          onClick={toCourses}
-        >
-          Contact Us
-        </button> */}
+          <button
+            id="exploreBtn"
+            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
+            onClick={toCourses}
+          >
+            Contact Us
+          </button>
         </div>
       </div>
 
