@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[95vh] sm:h-[100vh] mt-40">
+      <div className="h-[95vh] sm:h-[100vh] mt-40 sm:mt-20">
         <div
           id="courseSection"
           className="flex flex-col gap-5 mb-14 scroll-smooth active"
@@ -112,7 +112,7 @@ export default function Home() {
             />
           </SwiperSlide>
         </Swiper>
-        <div className="w-full flex justify-center mt-10 sm:mt-20">
+        <div className="w-full flex justify-center mt-10 sm:mt-16">
           <button
             id="exploreBtn"
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-10 px-10">
+      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-24 px-10">
         <div className="flex flex-col gap-10 mb-14 scroll-smooth active sm:w-[50%]">
           <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-0 md:text-5xl md:text-left md:m-0">
             Why Choose Us?
@@ -222,6 +222,8 @@ export default function Home() {
         </button> */}
         </div>
       </div>
+
+      <div className="h-[100vh]"></div>
     </>
   ) : (
     <div className="w-full h-[100vh] flex justify-center item-center">
