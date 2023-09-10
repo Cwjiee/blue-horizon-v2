@@ -14,10 +14,10 @@ export default function Contact() {
     <>
       <Navbar>Contact</Navbar>
       <div className="h-[90vh] py-[50px]">
-        <h1 className="text-4xl px-10 font-bold md:text-5xl md:px-0">
+        <h1 className="text-4xl px-6 font-bold md:text-5xl md:px-0">
           Contact Us
         </h1>
-        <div className="flex flex-col w-full sm:flex-row px-6 sm:px-0">
+        <div className="flex flex-col w-full sm:flex-row px-6 sm:px-0 mt-2">
           <div className="pb-12 sm:w-1/2">
             <p className="mt-1 text-sm leading-6 text-gray-500">
               Use a permanent address where you can receive mail.
@@ -86,7 +86,7 @@ export default function Contact() {
                   id="about"
                   name="about"
                   rows={5}
-                  className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4"
+                  className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4 mt-2"
                   defaultValue={""}
                 />
               </div>

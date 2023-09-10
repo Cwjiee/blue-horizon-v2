@@ -27,7 +27,7 @@ export default function Home() {
 
   return !isloading ? (
     <>
-      <div className="h-[100vh]">
+      <div className="h-[85vh] sm:h-[100vh]">
         <Navbar>Home</Navbar>
         <div className="h-[90vh] pt-28">
           <div className="w-full m-auto">
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[100vh] mt-40">
+      <div className="h-[95vh] sm:h-[100vh] mt-40">
         <div
           id="courseSection"
           className="flex flex-col gap-5 mb-14 scroll-smooth active"
@@ -66,7 +66,7 @@ export default function Home() {
           >
             Explore The Wonders Of Sea Diving With Us!
           </h1>
-          <p className="keep-all w-[80%] m-auto md:w[45%] md:m-0 md:w-[48%] text-gray-400">
+          <p className="keep-all w-[80%] m-auto md:w[45%] md:m-0 md:w-[48%] text-gray-400 text-center sm:text-left">
             Are you ready to plunge into the majestic depths of the underwater
             world? Look no further!
           </p>
@@ -112,7 +112,7 @@ export default function Home() {
             />
           </SwiperSlide>
         </Swiper>
-        <div className="w-full flex justify-center mt-20">
+        <div className="w-full flex justify-center mt-10 sm:mt-20">
           <button
             id="exploreBtn"
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
@@ -123,12 +123,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[100vh] flex flex-row mt-10">
-        <div className="flex flex-col gap-10 mb-14 scroll-smooth active w-[50%]">
-          <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-auto md:text-5xl md:text-left md:m-0">
+      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-10 px-10">
+        <div className="flex flex-col gap-10 mb-14 scroll-smooth active sm:w-[50%]">
+          <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-0 md:text-5xl md:text-left md:m-0">
             Why Choose Us?
           </h1>
-          <p className="keep-all m-auto md:m-0 text-gray-400">
+          <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400">
             We are a team of experienced divers who are passionate about
             exploring the underwater world. We are committed to providing you
             with the best diving experience.
@@ -199,7 +199,7 @@ export default function Home() {
             onMouseOut={() =>
               document.getElementById("hiddenText").classList.add("hidden")
             }
-            className="mb-10"
+            className="mb-10 hidden sm:block"
           >
             <Player
               autoplay
