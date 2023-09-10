@@ -197,18 +197,25 @@ export default function Home() {
               </h3>
             </div>
           </div>
+          <button
+            id="exploreBtn"
+            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 sm:hidden"
+            onClick={toCourses}
+          >
+            Contact Us
+          </button>
         </div>
         <div className="hidden sm:flex flex-col items-center">
-          <p id="hiddenText" className="hidden text-white text-lg">
+          {/* <p id="hiddenText" className="hidden text-white text-lg">
             fun fact: there is no fun fact!
-          </p>
+          </p> */}
           <div
-            onMouseOver={() =>
-              document.getElementById("hiddenText").classList.remove("hidden")
-            }
-            onMouseOut={() =>
-              document.getElementById("hiddenText").classList.add("hidden")
-            }
+            // onMouseOver={() =>
+            //   document.getElementById("hiddenText").classList.remove("hidden")
+            // }
+            // onMouseOut={() =>
+            //   document.getElementById("hiddenText").classList.add("hidden")
+            // }
             className="mb-0 hidden sm:block"
           >
             <Player
