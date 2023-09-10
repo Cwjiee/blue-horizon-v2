@@ -23,7 +23,7 @@ export default function Courses() {
           Courses
         </h1>
         <div className="flex flex-wrap justify-center gap-16 mt-12">
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image src={openWater} alt="open-water" width={400} height={400} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -39,7 +39,7 @@ export default function Courses() {
               </span>
             </div>
           </div>
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image
               src={advancedOpenWater}
               alt="open-water"
@@ -60,7 +60,7 @@ export default function Courses() {
               </span>
             </div>
           </div>
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image
               src={rescueDiver}
               alt="open-water"
@@ -81,7 +81,7 @@ export default function Courses() {
               </span>
             </div>
           </div>
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image
               src={enrichedDiver}
               alt="open-water"
@@ -104,7 +104,7 @@ export default function Courses() {
               </span>
             </div>
           </div>
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image
               src={scubaRefresher}
               alt="open-water"
@@ -125,7 +125,7 @@ export default function Courses() {
               </span>
             </div>
           </div>
-          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-xs rounded-2xl">
+          <div className="overflow-hidden shadow-lg bg-slate-700 max-w-[18rem] rounded-2xl">
             <Image src={diveTheory} alt="open-water" width={400} height={400} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
