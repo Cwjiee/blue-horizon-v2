@@ -20,6 +20,8 @@ export default function Home() {
   const [isloading, setIsLoading] = useState(true);
 
   const toCourses = () => Router.push("/courses");
+  const toContact = () => Router.push("/contact");
+  const toAbout = () => Router.push("/about")
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1500);
@@ -123,7 +125,46 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[80vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-20 px-10">
+      <div className="h-[80vh] px-10 mt-18 sm:mt-20">
+        <div className="section sm:flex flex-row justify-between">
+          <div className="left-section flex flex-col gap-8 sm:w-1/2 pt-12">
+            <div className="top-left-section">
+              <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-0 md:text-5xl md:text-left md:m-0">
+                About us
+              </h1>
+            </div>
+            <div className="bottom-right-section">
+              <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400 text-center sm:text-left">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cum incidunt quasi, est tempore, tempora omnis nesciunt molestiae eum modi, maiores aut. Quos placeat nam assumenda beatae dicta sint iste.
+                Aliquid animi necessitatibus, commodi voluptatibus consequatur fugiat sunt labore non earum reiciendis in beatae cum aliquam impedit doloremque iste incidunt rerum. Facere similique deleniti itaque dicta excepturi nesciunt aspernatur voluptatem?
+              </p>
+            </div>
+            <div className="bottom-bottom-right-section mt-2 sm:mt-10 mx-auto sm:mx-0">
+              <button
+                className="bg-sky-600 py-4 px-8 rounded-full active:bg-sky-700"
+                onClick={toAbout}
+              >
+                About Us
+              </button>
+            </div>
+          </div>
+          <div className="right-section hidden sm:block">
+            <Player
+              autoplay
+              loop
+              src="https://lottie.host/c7732f55-3341-4e0f-ae0b-8755b78fdd48/hutUKknGbA.json"
+              style={{ height: "500px", width: "500px" }}
+            >
+              <Controls
+                visible={false}
+                buttons={["play", "repeat", "frame", "debug"]}
+              />
+            </Player>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[90vh] sm:h-[100vh] flex flex-row mt-0 sm:mt-20 px-10">
         <div className="flex flex-col gap-10 sm:w-[50%] mt-20">
           <h1 className="mt-10 text-3xl font-bold text-center keep-all leading-snug m-0 md:text-5xl md:text-left md:m-0">
             Why Choose Us?
@@ -199,8 +240,8 @@ export default function Home() {
           </div>
           <button
             id="exploreBtn"
-            className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700 sm:hidden"
-            onClick={toCourses}
+            className="bg-sky-600 py-3 rounded-full active:bg-sky-700 sm:hidden"
+            onClick={toContact}
           >
             Contact Us
           </button>
@@ -230,17 +271,15 @@ export default function Home() {
               />
             </Player>
           </div>
+          
           <button
-            id="exploreBtn"
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
-            onClick={toCourses}
+            onClick={toContact}
           >
             Contact Us
           </button>
         </div>
       </div>
-
-      <div className="h-[100vh]"></div>
     </>
   ) : (
     <div className="w-full h-[100vh] flex justify-center item-center">
