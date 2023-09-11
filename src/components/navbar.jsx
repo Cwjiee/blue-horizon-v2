@@ -18,10 +18,6 @@ export default function Navbar({ children }) {
       href: "/about",
       label: "About",
     },
-    {
-      href: "/contact",
-      label: "Contact",
-    },
   ];
 
   const openNav = () => {
@@ -67,9 +63,12 @@ export default function Navbar({ children }) {
               );
             })}
           </ul>
-          <button className="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full">
-            Get Started
-          </button>
+          <Link
+            href="/contact"
+            className="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded-full"
+          >
+            Contact Us
+          </Link>
         </div>
       </nav>
       <div className="navbar-menu relative z-50 hidden">
@@ -114,12 +113,12 @@ export default function Navbar({ children }) {
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <a
-                className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-                href="#"
+              <Link
+                className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
+                href="./contact"
               >
-                Get Started
-              </a>
+                Contact Us
+              </Link>
             </div>
           </div>
         </nav>

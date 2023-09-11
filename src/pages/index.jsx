@@ -21,7 +21,7 @@ export default function Home() {
 
   const toCourses = () => Router.push("/courses");
   const toContact = () => Router.push("/contact");
-  const toAbout = () => Router.push("/about")
+  const toAbout = () => Router.push("/about");
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1500);
@@ -135,8 +135,14 @@ export default function Home() {
             </div>
             <div className="bottom-right-section">
               <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400 text-center sm:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cum incidunt quasi, est tempore, tempora omnis nesciunt molestiae eum modi, maiores aut. Quos placeat nam assumenda beatae dicta sint iste.
-                Aliquid animi necessitatibus, commodi voluptatibus consequatur fugiat sunt labore non earum reiciendis in beatae cum aliquam impedit doloremque iste incidunt rerum. Facere similique deleniti itaque dicta excepturi nesciunt aspernatur voluptatem?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione cum incidunt quasi, est tempore, tempora omnis nesciunt
+                molestiae eum modi, maiores aut. Quos placeat nam assumenda
+                beatae dicta sint iste. Aliquid animi necessitatibus, commodi
+                voluptatibus consequatur fugiat sunt labore non earum reiciendis
+                in beatae cum aliquam impedit doloremque iste incidunt rerum.
+                Facere similique deleniti itaque dicta excepturi nesciunt
+                aspernatur voluptatem?
               </p>
             </div>
             <div className="bottom-bottom-right-section mt-2 sm:mt-10 mx-auto sm:mx-0">
@@ -271,7 +277,7 @@ export default function Home() {
               />
             </Player>
           </div>
-          
+
           <button
             className="bg-sky-600 py-4 px-7 rounded-full active:bg-sky-700"
             onClick={toContact}

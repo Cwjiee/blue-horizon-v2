@@ -36,6 +36,7 @@ export default function Contact() {
                     type="text"
                     name="first-name"
                     id="first-name"
+                    autoComplete="false"
                     className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4"
                   />
                 </div>
@@ -51,8 +52,9 @@ export default function Contact() {
                 <div className="mt-2">
                   <input
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="last-name"
+                    id="last-name"
+                    autoComplete="false"
                     className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4"
                   />
                 </div>
@@ -70,6 +72,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     type="email"
+                    autoComplete="false"
                     className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4"
                   />
                 </div>
@@ -88,6 +91,7 @@ export default function Contact() {
                   rows={5}
                   className="block bg-slate-800 w-full rounded-md border-0 py-1.5 text-gray-300 shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 focus:outline-none px-4 mt-2"
                   defaultValue={""}
+                  autoComplete="false"
                 />
               </div>
             </div>
