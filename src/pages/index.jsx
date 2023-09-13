@@ -15,6 +15,7 @@ import coral from "../../public/coral.png";
 import vest from "../../public/vest.png";
 import oxygen from "../../public/oxygen-tank.png";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [isloading, setIsLoading] = useState(true);
@@ -286,6 +287,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <Footer />
     </>
   ) : (
     <div className="w-full h-[100vh] flex justify-center item-center">
