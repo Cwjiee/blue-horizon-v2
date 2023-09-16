@@ -34,9 +34,9 @@ export default function Navbar({ children }) {
     <>
       <nav className="flex justify-between items-center h-[10vh] bg-slate-900 text-white text-sm md:text-lg">
         <div className="ml-2">
-          <a href="#">
+          <Link href="/">
             <Image src={Logo} alt="logo" width={200} height="auto" />
-          </a>
+          </Link>
         </div>
         <div className="lg:hidden">
           <button
