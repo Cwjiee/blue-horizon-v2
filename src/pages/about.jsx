@@ -8,6 +8,8 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import instructorData from "../../utils/instructorsData";
+import { v4 } from "uuid";
 
 export default function About() {
   const [isloading, setIsLoading] = useState(true);
@@ -32,14 +34,14 @@ export default function About() {
               <div className="px-6 pt-14">
                 <div className="font-bold text-4xl mb-6">Meet Our Team</div>
                 <p className="text-slate-300 leading-7 text-lg">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Blanditiis laborum nobis laboriosam modi numquam odit sed
-                  molestias, voluptas dolorum quae ipsam. Perferendis iure est
-                  totam ipsum ea error dolores harum? Consequatur totam deserunt
-                  nesciunt adipisci ex ea sint laboriosam error. Fuga ad illo
-                  impedit beatae inventore. Ipsum perspiciatis odit explicabo
-                  labore cumque, repellendus quos temporibus magni unde quam
-                  velit voluptas.
+                  Our team at Blue Horizon diving school is a tight-knit group
+                  of experienced and passionate scuba diving professionals. With
+                  years of underwater exploration under our belts, we&#39;re
+                  here to guide you on your diving journey. Each team member is
+                  dedicated to safety, education, and environmental
+                  conservation, ensuring that every dive is both thrilling and
+                  responsible. Meet the team that&#39;s committed to making your
+                  scuba diving experiences unforgettable.
                 </p>
               </div>
             </div>
@@ -65,10 +67,12 @@ export default function About() {
               <div className="font-bold text-xl mb-2">History</div>
               <hr className="my-4" />
               <p className="text-slate-300 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt veniam neque beatae et impedit officiis, voluptate
-                earum quaerat? Magni quia laborum sunt cumque distinctio facilis
-                est incidunt molestiae quaerat fugiat.
+                Founded in [year of establishment], [Your Dive School Name] has
+                been a hub for scuba diving enthusiasts ever since. We&#39;ve grown
+                and evolved, but our passion for underwater exploration remains
+                unwavering. Over the years, we&#39;ve become a trusted source of
+                diving education and adventure, leaving a lasting imprint on the
+                diving community.
               </p>
             </div>
           </div>
@@ -77,10 +81,15 @@ export default function About() {
               <div className="font-bold text-xl mb-2">Mission</div>
               <hr className="my-4" />
               <p className="text-slate-300 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt veniam neque beatae et impedit officiis, voluptate
-                earum quaerat? Magni quia laborum sunt cumque distinctio facilis
-                est incidunt molestiae quaerat fugiat.
+                At Blue Horizon diving school, our mission is crystal clear: to
+                empower individuals to explore and appreciate the underwater
+                world responsibly. We&#39;re committed to providing top-quality
+                scuba diving education while emphasizing safety and
+                environmental conservation. Our goal is to equip divers with the
+                skills and knowledge they need to enjoy the underwater realm
+                while actively contributing to its preservation. Join us in our
+                mission to dive with purpose and protect our oceans for future
+                generations.
               </p>
             </div>
           </div>
@@ -110,45 +119,23 @@ export default function About() {
             }}
             className="my-10"
           >
-            <SwiperSlide className="ml-2 px-5 sm:ml-5">
-              <div className="card overflow-hidden shadow-lg bg-slate-700 max-w-lg h-96 rounded-2xl text-center">
-                <div className="px-12 py-4">
-                  <div className="font-bold text-xl mb-2">Member 1</div>
-                  <p className="text-slate-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nesciunt veniam neque beatae et impedit officiis, voluptate
-                    earum quaerat? Magni quia laborum sunt cumque distinctio
-                    facilis est incidunt molestiae quaerat fugiat.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="ml-2 px-5 sm:ml-5">
-              <div className="card overflow-hidden shadow-lg bg-slate-700 max-w-lg h-96 rounded-2xl text-center">
-                <div className="px-12 py-4">
-                  <div className="font-bold text-xl mb-2">Member 2</div>
-                  <p className="text-slate-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nesciunt veniam neque beatae et impedit officiis, voluptate
-                    earum quaerat? Magni quia laborum sunt cumque distinctio
-                    facilis est incidunt molestiae quaerat fugiat.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="ml-2 px-5 sm:ml-5">
-              <div className="card overflow-hidden shadow-lg bg-slate-700 max-w-lg h-96 rounded-2xl text-center">
-                <div className="px-12 py-4">
-                  <div className="font-bold text-xl mb-2">Member 3</div>
-                  <p className="text-slate-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nesciunt veniam neque beatae et impedit officiis, voluptate
-                    earum quaerat? Magni quia laborum sunt cumque distinctio
-                    facilis est incidunt molestiae quaerat fugiat.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+            {instructorData.map((member) => {
+              return (
+                <SwiperSlide key={v4()} className="ml-2 px-5 sm:ml-5">
+                  <div className="card overflow-hidden shadow-lg bg-slate-700 max-w-lg h-[28rem] sm:h-96 rounded-2xl text-center">
+                    <div className="px-12 py-4 flex flex-col justify-center">
+                      <div className="mx-auto w-[300px] object-cover rounded-lg mb-2">
+                        <Image src={member.src} alt={member.name} className="rounded-xl" />
+                      </div>
+                      <div className="font-bold text-xl mb-2">{member.name}</div>
+                      <p className="text-slate-300">
+                        {member.experience}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
       </div>

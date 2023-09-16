@@ -1,14 +1,8 @@
 import Image from "next/image";
-import openWater from "../../public/open-water-dive.jpg";
-import advancedOpenWater from "../../public/advanced-diver.jpg";
-import rescueDiver from "../../public/rescue-diver.jpg";
-import enrichedDiver from "../../public/enriched-diver.jpg";
-import scubaRefresher from "../../public/scuba-refresher.jpg";
-import diveTheory from "../../public/dive-theory.jpg";
 import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import HashLoader from "react-spinners/HashLoader";
-import data from "../../utils/courseData";
+import courseData from "../../utils/courseData";
 import v4 from "uuid";
 
 export default function Courses() {
@@ -25,7 +19,7 @@ export default function Courses() {
           Courses
         </h1>
         <div className="flex flex-wrap justify-center gap-16 mt-12">
-          {data.map((course) => {
+          {courseData.map((course) => {
             return (
               <div
                 key={v4}

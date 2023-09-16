@@ -5,7 +5,7 @@ import enrichedDiver from "../public/enriched-diver.jpg";
 import scubaRefresher from "../public/scuba-refresher.jpg";
 import diveTheory from "../public/dive-theory.jpg";
 
-const data = [
+const courseData = [
   {
     name: "Open Water Diver",
     price: 250,
@@ -50,4 +50,4 @@ const data = [
   },
 ];
 
-export default data;
+export default courseData;
