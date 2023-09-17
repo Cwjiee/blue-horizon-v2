@@ -70,7 +70,7 @@ export default function About() {
                 <div className="font-bold text-xl mb-2">History</div>
                 <hr className="my-4" />
                 <p className="text-slate-300 text-justify">
-                  Founded in [year of establishment], [Your Dive School Name]
+                  Founded in 2023, Blue Horizon diving school
                   has been a hub for scuba diving enthusiasts ever since.
                   We&#39;ve grown and evolved, but our passion for underwater
                   exploration remains unwavering. Over the years, we&#39;ve
