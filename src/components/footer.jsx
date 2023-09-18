@@ -1,4 +1,4 @@
-import Padi from "../../public/padi.svg";
+import Padi from "../../public/Padi_white.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +21,7 @@ export default function Footer() {
                   href="/courses"
                   className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400"
                 >
-                  courses
+                  Courses
                 </Link>
               </li>
               <li>

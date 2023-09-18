@@ -137,17 +137,19 @@ export default function Home() {
               </div>
               <div className="bottom-right-section">
                 <p className="keep-all mx-2 sm:m-auto md:m-0 text-gray-400 text-center sm:text-left">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ratione cum incidunt quasi, est tempore, tempora omnis
-                  nesciunt molestiae eum modi, maiores aut. Quos placeat nam
-                  assumenda beatae dicta sint iste. Aliquid animi
-                  necessitatibus, commodi voluptatibus consequatur fugiat sunt
-                  labore non earum reiciendis in beatae cum aliquam impedit
-                  doloremque iste incidunt rerum. Facere similique deleniti
-                  itaque dicta excepturi nesciunt aspernatur voluptatem?
+                  Welcome to Blue Horizon diving school, your gateway to the
+                  mesmerizing world of scuba diving. We&#39;re more than just a
+                  diving school; we&#39;re a passionate community of divers,
+                  instructors, and ocean enthusiasts who are dedicated to
+                  sharing the magic of underwater exploration with you. Whether
+                  you&#39;re a beginner eager to take your first breaths
+                  underwater or an experienced diver seeking new horizons, Blue
+                  Horizon diving school is your trusted partner in making every
+                  dive an unforgettable adventure. Join us, and let&#39;s dive
+                  into the extraordinary together.
                 </p>
               </div>
-              <div className="bottom-bottom-right-section mt-2 sm:mt-10 mx-auto sm:mx-0">
+              <div className="bottom-bottom-right-section mt-2 sm:mt-4 mx-auto sm:mx-0">
                 <button
                   className="bg-sky-600 py-4 px-8 rounded-full active:bg-sky-700"
                   onClick={toAbout}
