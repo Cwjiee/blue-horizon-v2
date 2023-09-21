@@ -3,6 +3,9 @@ import Footer from "@/components/footer";
 import HashLoader from "react-spinners/HashLoader";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { useEffect, useState } from "react";
+import phone from "../../public/telephone.svg"
+import email from "../../public/envelope.svg"
+import Image from "next/image";
 
 export default function Contact() {
   const [isloading, setIsLoading] = useState(true);
@@ -98,10 +101,18 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
-              {/* <div className="">
-              <a href="mailto:jackchong398@gmail.com">email</a>
-            </div> */}
+            <div className="w-1/2 relative">
+              <div className="absolute text-gray-500 right-28">
+                <div className="flex flex-row gap-3 mb-1">
+                  <Image src={phone} alt="phone-number" />
+                  <span>018-4076922</span>
+                </div>
+                <div className="flex flex-row gap-3">
+                  <Image src={email} alt="email" />
+                  <p><a href="mailto:jackchong398@gmail.com">jackchong398@gmail.com</a></p>
+                </div>
+                
+              </div>
               <div className="hidden sm:block">
                 <Player
                   autoplay
