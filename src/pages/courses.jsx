@@ -44,6 +44,11 @@ export default function Courses() {
                       RM {course.price}
                     </span>
                   </div>
+                  <div className="px-6 pt-2 pb-2 absolute bottom-0 right-0">
+                    <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2 mb-2">
+                      {course.duration}
+                    </span>
+                  </div>
                 </div>
               );
             })}

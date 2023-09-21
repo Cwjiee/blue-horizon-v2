@@ -8,13 +8,17 @@ export default function Footer() {
       <div className="mx-auto mt-20">
         <footer className="p-4 rounded-lg shadow md:px-6 md:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">
-            <a
-              href="https://www.padi.com/"
-              target="_blank"
-              className="flex items-center mb-4 sm:mb-0"
-            >
-              <Image src={Padi} alt="padi-logo" />
-            </a>
+            <div className="flex flex-col gap-1">
+              <p className="text-gray-500">certified by</p>
+              <a
+                href="https://www.padi.com/"
+                target="_blank"
+                className="flex items-center mb-4 sm:mb-0"
+              >
+                <Image src={Padi} alt="padi-logo" />
+              </a>
+            </div>
+
             <ul className="flex flex-wrap items-center mb-6 sm:mb-0">
               <li>
                 <Link
